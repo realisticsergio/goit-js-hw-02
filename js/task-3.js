@@ -11,8 +11,12 @@ console.log(getElementWidth("60px", "12px", "8.5px")); // 101
 console.log(getElementWidth("200px", "0px", "0px")); // 200
 
 function checkForSpam(message) {
-  
-}
+    if (message.toLowerCase().includes("spam") || message.toLowerCase().includes("sale")) {
+        return true;
+    } else {
+        return false;
+  }
+} 
 
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
